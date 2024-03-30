@@ -1,0 +1,13 @@
+import SideNav from '@/app/_ui/sidebar'
+import { ReactNode } from 'react'
+
+export default function Layout({ children }: { children: ReactNode }) {
+  return (
+    <div className='flex h-screen flex-col md:flex-row md:overflow-hidden'>
+      <div className='w-full flex-none md:w-72'>
+        <SideNav />
+      </div>
+      <div className='flex-grow p-6 md:overflow-y-auto md:p-4'>{children}</div>
+    </div>
+  )
+}
